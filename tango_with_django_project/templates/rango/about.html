@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+
+
+
+	<html>
+		<head>
+			<title>About Page</title>
+		</head>
+		<body>
+			<h1>Rango says...</h1>
+			<div>
+				Here is the about Rangoo.. <br />
+				<strong>{{ myname }}</strong><br />
+			</div>
+			<div>
+				<a href="/rango/">Main Rango</a><br />
+				<img src="{% static 'images/rango_camlion_image.jpg' %}"
+					 alt="Picture of rango"/>
+				<img src="/media/images/cat.jpg"
+					alt="Picture of a cat" />
+					 
+			</div>
+		</body>
+	</html>
