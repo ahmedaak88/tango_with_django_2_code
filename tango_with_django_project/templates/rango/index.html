@@ -11,6 +11,7 @@
 				hey there partner! <br />
 				<strong>{{ boldmessage }}</strong><br />
 			</div>
+			<h2>Most liked category is {{most_liked_category.name}}</h2>
 			<div>
 				{% if categories %}
 					<ul>
@@ -25,10 +26,23 @@
 				{% endif %}
 			</div>
 			<div>
+				<h2>Most Viewed Page is  {{most_viewed_page}}</h2>
+				{% if pages %}
+					<ul>
+						{% for page in pages %}
+						<li>
+							<a href="{{page.url}}">{{page.title}}</a>
+						</li>
+						{% endfor %}
+					</ul>
+				{% else %}
+					<strong>There are no pages availble</strong>
+				{% endif %}
+			</div>
+			<div>
 				<a href="/rango/about/">About</a><br />
 				<img src="{% static 'images/rango_camlion_image.jpg' %}"
 					 alt="Picture of rango"/>	
 			</div>
-			
 		</body>
 	</html>
